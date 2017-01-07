@@ -40,5 +40,5 @@ if __name__ == '__main__':
         friends_online = get_online_friends(vk_session)
         print("\nДрузья онлайн:\n")
         output_friends_to_console(friends_online)
-    except:
+    except vk.exceptions.VkAuthError:
         print("Приложение завершилось с ошибкой")
